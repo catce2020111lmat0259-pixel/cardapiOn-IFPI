@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - CardapiOn.IFPI</title>
+  <link rel="stylesheet" href="style_login.css"/>
+  <script src="script_login.js" defer></script>
+</head>
+<body>
+  <div class="login-page">
+    <div class="login-box">
+      <img src="logo-ifpi.png" alt="Logo IFPI" class="logo" />
+      
+      <h2>Login</h2>
+      <p>Acesse ao <strong>CardapiOn.IFPI</strong>:</p>
+
+      <form id="loginForm">
+        <label for="usuario">Usuário ou E-mail</label>
+        <input type="text" id="usuario" name="usuario" required />
+
+        <label for="senha">Senha</label>
+        <div class="senha-container">
+            <input type="password" id="senha" name="senha" required />
+            <img src="olho-fechado.png" id="toggleSenha" class="icone-fechado" alt="Mostrar senha" />
+        </div>
+
+        <button type="submit">Entrar</button>
+        <a href="#">Esqueceu ou deseja alterar sua senha?</a>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

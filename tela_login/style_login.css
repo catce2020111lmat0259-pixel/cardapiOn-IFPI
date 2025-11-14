@@ -1,0 +1,148 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fundo único */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0c4e2f; /* Verde institucional */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Página de login */
+.login-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Caixa de login centralizada */
+.login-box {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Logo e título */
+.logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.login-box h2 {
+  color: #006837;
+  margin-bottom: 5px;
+}
+
+.login-box p {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* Título do formulário */
+.login-box h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  color: #006837;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* Labels e inputs */
+label {
+  text-align: left;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Campo de senha com ícone de visibilidade */
+.senha-container {
+  position: relative;
+  width: 100%;
+
+}
+
+.senha-container input {
+  width: 100%;
+  padding: 10px 40px 10px 10px; /* espaço extra à direita pro ícone */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Ícone do olho dentro do campo */
+/* olho fechado */
+.icone-fechado {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 10px;
+  top: 65%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+/* olho aberto */
+.icone-aberto {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 10px;
+  top: 55%; /* exemplo de leve ajuste */
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* Botão de login */
+button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #006837;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #004d2a;
+}
+
+/* Link de recuperação */
+a {
+  margin-top: 10px;
+  color: #006837;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+a:hover {
+  text-decoration: underline;
+}
