@@ -1,0 +1,311 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Sidebar institucional */
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  background: #1b5e20;
+  color: white;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+aside > div {
+  padding-top: 30px;
+}
+
+aside h2 {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 15px 0;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: #2e7d32;
+}
+
+aside footer {
+  font-size: 12px;
+  color: #ddd;
+  text-align: center;
+}
+
+/* Conteúdo principal */
+main {
+  margin-left: 260px;
+  padding: 30px;
+  width: calc(100% - 260px);
+  box-sizing: border-box;
+
+}
+
+/* Cabeçalho do painel */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.search {
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.search input {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Painel superior */
+.painel-superior {
+  background-color: #f0f0f0;
+  padding: 20px 40px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+.painel-superior h1 {
+  margin: 0;
+  color: #006837;
+  font-size: 28px;
+}
+
+.painel-superior p {
+  margin: 5px 0 0;
+  color: #555;
+}
+
+/* Container principal */
+.conteudo-principal {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* Cardápio */
+.cardapio-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.cardapio-dia {
+  text-align: left;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.cardapio-dia h2 {
+  color: #006837;
+  margin-bottom: 10px;
+}
+
+.cardapio-dia ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cardapio-dia li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+/* Botões de dias */
+.dias-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.dia-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dia-btn.ativo {
+  background-color: #006837;
+  color: white;
+}
+
+/* Navegação entre semanas */
+.semana-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.semana-nav button {
+  background-color: white;
+  border: 1px solid black;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+}
+
+/* Avisos */
+.avisos-cardapio {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.avisos-cardapio h2 {
+  color: #006837;
+  margin-bottom: 10px;
+}
+
+.avisos-cardapio ul {
+  list-style: disc;
+  padding-left: 20px;
+  color: #333;
+}
+
+/* Modal flutuante */
+body.modal-ativo .cardapio-container {
+  filter: blur(4px);
+  pointer-events: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 260px;
+  width: calc(100% - 260px);
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-cardapio {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  display: flex;
+  gap: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  z-index: 1000;
+  max-width: 800px;
+  margin-top: 75px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-cardapio::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  left: 50%;
+  width: 2px;
+  background-color: red;
+  transform: translateX(-1px);
+  z-index: 0;
+}
+
+.coluna {
+  flex: 1;
+  min-width: 200px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coluna h2 {
+  color: #006837;
+  margin-bottom: 10px;
+}
+
+.coluna ul {
+  list-style: none;
+  padding: 15px 20px;
+  margin: 0;
+  border: 2px solid red;
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.coluna li {
+  margin-bottom: 8px;
+  font-size: 16px;
+  text-align: left;
+}
+
+/* Botão de fechar modal */
+#fecharModal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: white;
+  font-size: 25px;
+  color: black;
+  padding: 1px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}

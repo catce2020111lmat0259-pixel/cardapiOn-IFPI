@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cardápio Semanal - RU IFPI</title>
+    <link rel="stylesheet" href="tela_cardapio.css" />
+    <script src="tela_cardapio.js" defer></script>
+</head>
+
+<body>
+    <aside>
+        <div>
+            <h2>CardapiOn</h2>
+            <nav>
+                <a href="#">🏠 Início</a>
+                <a href="#">📋 Cardápio</a>
+                <a href="#">📢 Avisos</a>
+                <a href="#">📊 Relatórios</a>
+                <a href="#">🔐 Login</a>
+            </nav>
+        </div>
+        <footer>
+            <p>&copy; Versão 2.0<br>Equipe TDS/IFPI</p>
+            <br>
+        </footer>
+    </aside>
+
+    <!-- principal do cardápio -->
+    <main>
+        <header>
+            <h1>Cardápio Semanal - RU IFPI</h1>
+            <div class="search"><input type="text" placeholder="Buscar..." /></div>
+            <div class="usuario">👤 Aluno Logado</div>
+        </header>
+
+        <section class="cardapio-container">
+            <h3>Planeje suas refeições de forma prática e organizada</h3>
+            <br>
+            <div class="semana-nav">
+                <button id="semana-anterior">← Semana Anterior</button>
+                <button id="semana-proxima">Próxima Semana →</button>
+            </div>
+
+            <div class="dias-nav">
+                <button class="dia-btn ativo" data-dia="segunda">Segunda</button>
+                <button class="dia-btn" data-dia="terca">Terça</button>
+                <button class="dia-btn" data-dia="quarta">Quarta</button>
+                <button class="dia-btn" data-dia="quinta">Quinta</button>
+                <button class="dia-btn" data-dia="sexta">Sexta</button>
+            </div>
+
+            <div class="cardapio-dia" id="cardapio-dia">
+            </div>
+        </section>
+
+        <section class="avisos-cardapio">
+            <h2>Avisos do Cardápio</h2>
+            <ul>
+                <li>Cardápio sujeito a alterações sem aviso prévio.</li>
+                <li>Frutas podem variar conforme disponibilidade.</li>
+                <li>Opções vegetarianas disponíveis mediante solicitação.</li>
+            </ul>
+        </section>
+    </main>
+
+    <div class="overlay" id="overlay">
+        <div class="modal-cardapio">
+            <div class="coluna almoco">
+                <h2>Almoço</h2>
+                <ul id="lista-almoco"></ul>
+            </div>
+            <div class="coluna jantar">
+                <h2>Jantar</h2>
+                <ul id="lista-jantar"></ul>
+            </div>
+            <button id="fecharModal">×</button>
+        </div>
+    </div>
+</body>
+
+</html>
