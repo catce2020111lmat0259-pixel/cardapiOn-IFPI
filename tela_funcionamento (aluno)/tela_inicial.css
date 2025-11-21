@@ -1,0 +1,200 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    min-height: 100vh;
+    color: #333;
+    margin: 0;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background: #1b5e20;
+    color: white;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+aside>div {
+    padding-top: 30px;
+}
+
+aside h2 {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 15px 0;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: #2e7d32;
+}
+
+aside footer {
+    font-size: 12px;
+    color: #ddd;
+    text-align: center;
+}
+
+/* principal geral */
+main {
+    margin-left: 260px;
+    padding: 30px;
+    flex-grow: 1;
+    width: calc(100% - 260px);
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* pesquisa */
+.search {
+  position: relative;
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.search input {
+  padding: 10px 36px 10px 12px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+.search-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  font-size: 1.1em;
+}
+
+.usuario {
+    font-weight: bold;
+}
+
+/* cards de informações iniciais */
+.cards {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+/* status de funcionamento */
+.status-ru {
+    margin-top: 15px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    font-size: 1em;
+}
+
+.status-label {
+    font-weight: 600;
+    color: #333;
+    margin-right: 8px;
+}
+
+.aberto {
+    color: #00cc0a;
+    font-weight: bold;
+}
+
+.fechado {
+    color: #c62828;
+    font-weight: bold;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.card p {
+    font-size: 1.5em;
+    color: #27812d;
+    font-weight: bold;
+}
+
+.chart,
+.activities {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.chart h3,
+.activities h3 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.activities ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.activities li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
