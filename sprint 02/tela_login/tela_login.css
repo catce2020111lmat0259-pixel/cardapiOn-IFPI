@@ -1,0 +1,128 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* fundo*/
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0c4e2f;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* página login */
+.login-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.logo {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.login-box h1 {
+  color: #006837;
+  margin-bottom: 5px;
+}
+
+.login-box p {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.login-box h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: #006837;
+}
+
+/* formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+label {
+  text-align: left;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* senha */
+.senha-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.senha-container input {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.senha-container .material-icons {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #555;
+  font-size: 22px;
+  top: 50%;
+  transform: translateY(-37%);
+}
+
+/* Botão de login */
+button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #006837;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #004d2a;
+}
+
+/* Link de recuperação */
+a {
+  margin-top: 10px;
+  color: #006837;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+a:hover {
+  text-decoration: underline;
+}

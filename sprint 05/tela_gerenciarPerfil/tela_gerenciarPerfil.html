@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Painel do Restaurante Universitário - Cardápios, avisos e estoque atualizado." />
+    <title>CardapiOn.IFPI - Painel</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="tela_gerenciarPerfil.css">
+
+    <script src="tela_gerenciarPerfil.js" defer></script>
+    <script type="module" src="tela_perfilHistorico.js" defer></script>
+    <script type="module" src="tela_perfilLogin.js"></script>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <aside>
+        <div>
+            <h2>CardapiOn</h2>
+            <nav>
+                <a href="../../sprint 03/tela_inicial/tela_inicial_Adm.html">
+                    <i class="fa-solid fa-house"></i> Início
+                </a>
+                <a href="../../sprint 03/tela_inserirAlimento/tela_inserirAlimento.html">
+                    <i class="fa-solid fa-receipt"></i> Alimentos
+                </a>
+                <a href="../../sprint 04/tela_enviarAvisos/tela_enviarAvisos.html">
+                    <i class="fa-solid fa-bullhorn"></i> Avisos
+                </a>
+                <a href="../../sprint 05/tela_gerenciarPerfil/tela_gerenciarPerfil.html">
+                    <i class="fa-solid fa-users"></i> Usuários
+                </a>
+                <a href="../../sprint 02/tela_login/tela_login.html">
+                    <i class="fa-solid fa-right-from-bracket"></i> Sair
+                </a>
+            </nav>
+        </div>
+        <footer>
+            <p>&copy; Versão 5.0<br>Equipe TDS/IFPI</p>
+            <br>
+        </footer>
+    </aside>
+
+    <main>
+        <header>
+            <h1>Administrador - RU IFPI</h1>
+            <div class="search1">
+                <input type="text" id="campoBusca" placeholder="Buscar..." />
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="adm">👤 Administrador Logado</div>
+        </header>
+
+        <h2 class="titulo-painel"><i class="fa-solid fa-chart-line"></i> Painel do Administrador</h2>
+
+        <section class="container-gerenciar">
+            <p>Gerencie os perfis de usuários do sistema:</p>
+
+            <div class="usuarios-grid">
+                <div class="usuario-card" data-tipo="aluno">
+                    <h3><i class="fa-solid fa-user-graduate"></i> Alunos</h3>
+                    <p>Gerenciar cadastros, acessos e permissões dos estudantes.</p>
+
+                    <div>
+                        <button class="btn-gerenciar-login"><i class="fa-solid fa-key"></i> Gerenciar Login</button>
+                        <button class="btn-historico"><i class="fa-solid fa-clock-rotate-left"></i> Histórico de
+                            Acesso</button>
+                    </div>
+                </div>
+
+                <div class="usuario-card" data-tipo="funcionario">
+                    <h3><i class="fa-solid fa-user-tie"></i> Funcionários</h3>
+                    <p>Controle de perfis de servidores e colaboradores.</p>
+
+                    <div>
+                        <button type="button" class="btn-cadastrar-funcionario">
+                            <i class="fa-solid fa-user-plus"></i> Cadastrar
+                        </button>
+                        <button class="btn-gerenciar-login"><i class="fa-solid fa-key"></i> Gerenciar Login</button>
+                        <button class="btn-historico"><i class="fa-solid fa-clock-rotate-left"></i> Histórico de
+                            Acesso</button>
+                    </div>
+                </div>
+
+                <div class="usuario-card" data-tipo="admin">
+                    <h3><i class="fa-solid fa-user-shield"></i> Administradores</h3>
+                    <p>Configuração de privilégios e segurança do sistema.</p>
+
+                    <div>
+                        <button type="button" class="btn-cadastrar-admin">
+                            <i class="fa-solid fa-user-plus"></i> Cadastrar
+                        </button>
+                        <button class="btn-gerenciar-login"><i class="fa-solid fa-key"></i> Gerenciar Login</button>
+                        <button class="btn-historico"><i class="fa-solid fa-clock-rotate-left"></i> Histórico de
+                            Acesso</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="extras">
+                <h3><i class="fa-solid fa-circle-info"></i> Informações adicionais</h3>
+                <button class="btn-relatorio-login">
+                    <i class="fa-solid fa-file-lines"></i> Gerar relatório de uso
+                </button>
+            </div>
+
+        </section>
+        <!-- histórico dos usuários -->
+        <section id="historico-acesso" class="oculto">
+            <h2><i class="fa-solid fa-clock-rotate-left"></i> Histórico de Acesso</h2>
+            <table id="tabela-historico">
+                <thead>
+                    <tr>
+                        <th>Usuário</th>
+                        <th>Data/Hora</th>
+                        <th>Ação</th>
+                        <th>Status</th>
+                        <th>Origem</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- js perfilHistorico-->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- logins dos usuários -->
+        <section id="gerenciar-login-container" class="oculto">
+            <!-- js perfilLogin -->
+        </section>
+
+    </main>
+
+</body>
+
+</html>

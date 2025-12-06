@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cardápio Semanal - RU IFPI</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="tela_cardapio.css" />
+
+    <script src="tela_cardapio.js" defer></script>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <aside>
+        <div>
+            <h2>CardapiOn</h2>
+            <nav>
+                <a href="../../sprint 03/tela_inicial/tela_inicial_Alu.html"><i class="fa-solid fa-house"></i>
+                    Início</a>
+                <a href="../../sprint 02/tela_cardapio/tela_cardapio.html"><i class="fa-solid fa-clipboard-list"></i>
+                    Cardápio</a>
+                <a href="../../sprint 05/tela_suporteAluno/tela_suporteAluno.html"><i class="fa-solid fa-headset"></i>
+                    Suporte</a>
+                <a href="../../sprint 02/tela_login/tela_login.html"><i class="fa-solid fa-right-from-bracket"></i>
+                    Sair</a>
+            </nav>
+        </div>
+        <footer>
+            <p>&copy; Versão 5.0<br>Equipe TDS/IFPI</p>
+            <br>
+        </footer>
+    </aside>
+
+    <!-- principal do cardápio -->
+    <main>
+        <header>
+            <h1>Cardápio Semanal - RU IFPI</h1>
+            <div class="search">
+                <input type="text" id="campoBusca" placeholder="Buscar..." />
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="usuario">👤 Aluno Logado</div>
+        </header>
+
+        <!-- dias das refeições -->
+        <section class="cardapio-container">
+            <h3>Planeje suas refeições de forma prática e organizada</h3>
+            <br>
+            <div class="semana-nav">
+                <button id="semana-anterior">← Semana Anterior</button>
+                <span id="semana-atual"></span>
+                <button id="semana-proxima">Próxima Semana →</button>
+            </div>
+
+            <!-- vai pro js -->
+            <div class="dias-nav" id="dias-nav">
+            </div>
+
+            <div class="cardapio-dia" id="cardapio-dia">
+            </div>
+
+        </section>
+
+        <!-- exemplos de avisos -->
+        <section class="avisos-cardapio">
+            <h2>Avisos do Cardápio</h2>
+            <ul>
+                <li>Cardápio sujeito a alterações sem aviso prévio.</li>
+                <li>Frutas podem variar conforme disponibilidade.</li>
+                <li>Opções vegetarianas disponíveis mediante solicitação.</li>
+            </ul>
+        </section>
+
+        <!-- leva a pagina do histórico de refeições -->
+        <section class="historico-link">
+            <h2>Histórico de Refeições</h2>
+            <p>Acompanhe suas refeições consumidas e identifique padrões do seu consumo.</p>
+            <a href="../../sprint 03/tela_historicoRefeicoes/tela_historicoRefeicoes.html" class="btn-historico">Ver
+                Histórico</a>
+        </section>
+    </main>
+
+    <div class="overlay" id="overlay">
+        <div class="modal-cardapio">
+            <div class="coluna almoco">
+                <h2>Almoço</h2>
+                <ul id="lista-almoco"></ul>
+            </div>
+            <div class="coluna jantar">
+                <h2>Jantar</h2>
+                <ul id="lista-jantar"></ul>
+            </div>
+            <button id="fecharModal">×</button>
+        </div>
+    </div>
+</body>
+
+</html>

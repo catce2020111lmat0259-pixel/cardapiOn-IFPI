@@ -1,0 +1,391 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    min-height: 100vh;
+    color: #333;
+    margin: 0;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background: #1b5e20;
+    color: white;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+aside>div {
+    padding-top: 30px;
+}
+
+aside h2 {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 15px 0;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: #2e7d32;
+}
+
+aside footer {
+    font-size: 12px;
+    color: #ddd;
+    text-align: center;
+}
+
+/* principal geral */
+main {
+    margin-left: 260px;
+    padding: 30px;
+    flex-grow: 1;
+    width: calc(100% - 260px);
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* pesquisa */
+.search {
+    position: relative;
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.search input {
+    padding: 10px 36px 10px 12px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+}
+
+.search-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555;
+    font-size: 1.1em;
+}
+
+.usuario {
+    font-weight: bold;
+}
+
+/* montando o cardapio */
+#modulo-cardapio {
+    margin-top: 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+#modulo-cardapio h2 {
+    margin-bottom: 20px;
+}
+
+/* dia */
+.dia-cardapio {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.dia-cardapio h3 {
+    margin-bottom: 10px;
+    color: #2e7d32;
+}
+
+/* duas metades */
+.linha-refeicao {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* refeição */
+.refeicao {
+    background-color: #f5f5f5;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.refeicao h4 {
+    margin-bottom: 10px;
+    color: black;
+    text-align: center;
+}
+
+/* meia tela */
+.bloco-refeicao {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* categoria */
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.categorias button {
+    padding: 8px 15px;
+    background-color: #2392a5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.categorias button:hover {
+    background-color: #0d5d6b;
+}
+
+/* lado a lado */
+.painel-e-preview {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* modalzinho */
+.painel-selecao {
+    display: block;
+    width: 48%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.painel-selecao h5 {
+    margin-bottom: 10px;
+    color: #013803;
+}
+
+.painel-selecao label {
+    display: block;
+    margin: 5px 0;
+}
+
+/* botão fechar */
+.painel-selecao .fechar-painel {
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.painel-selecao .fechar-painel.mostrar {
+    display: inline-block;
+}
+
+.painel-selecao .fechar-painel:hover {
+    background-color: #b71c1c;
+}
+
+/* salvar e limpar */
+.acoes-cardapio {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.acoes-cardapio button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    color: rgb(12, 78, 56);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.acoes-cardapio button:hover {
+    background-color: #dfdfdf;
+}
+
+/* cardápio lateral */
+.preview-refeicao {
+    width: 48%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.preview-refeicao h5 {
+    margin-bottom: 8px;
+    color: #013803;
+}
+
+.lista-refeicao {
+    list-style: none;
+    padding-left: 0;
+}
+
+.lista-refeicao li {
+    margin-bottom: 5px;
+    padding: 4px 8px;
+    background-color: #e0f2f1;
+    border-radius: 4px;
+}
+
+/* resultado do cardápio */
+#resultado-cardapio {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#resultado-cardapio h3 {
+    margin-bottom: 15px;
+    color: rgb(11, 65, 15);
+    text-align: center;
+}
+
+#resultado-cardapio table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#resultado-cardapio th,
+#resultado-cardapio td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+#resultado-cardapio th {
+    background-color: #ebfaff;
+    color: rgb(9, 0, 59);
+}
+
+/* mensagem */
+#conteudo-principal {
+    position: relative;
+    min-height: 100vh;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.mensagem {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: #c01b1b;
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* x */
+.fechar-x {
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    font-size: 17px;
+    color: black;
+    cursor: pointer;
+}
+
+.fechar-x:hover {
+    color: red;
+}
+
+.mensagem {
+    position: relative;
+}
+
+/* botões da tabela criada */
+/* publicar */
+.btn-publicar-tabela {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-publicar-tabela:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* excluir */
+.btn-excluir-tabela {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-excluir-tabela:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+.btn-publicar-tabela,
+.btn-excluir-tabela {
+    
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding-right: 5px;
+}

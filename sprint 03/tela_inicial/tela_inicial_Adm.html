@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Painel do Restaurante Universitário - Cardápios, avisos e estoque atualizado." />
+    <title>CardapiOn.IFPI - Painel</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="tela_inicial_Adm.css">
+
+    <script src="tela_inicial_Adm.js" defer></script>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <aside>
+        <div>
+            <h2>CardapiOn</h2>
+            <nav>
+                <a href="../../sprint 03/tela_inicial/tela_inicial_Adm.html">
+                    <i class="fa-solid fa-house"></i> Início
+                </a>
+                <a href="../../sprint 03/tela_inserirAlimento/tela_inserirAlimento.html">
+                    <i class="fa-solid fa-receipt"></i> Alimentos
+                </a>
+                <a href="../../sprint 04/tela_enviarAvisos/tela_enviarAvisos.html">
+                    <i class="fa-solid fa-bullhorn"></i> Avisos
+                </a>
+                <a href="../../sprint 05/tela_gerenciarPerfil/tela_gerenciarPerfil.html">
+                    <i class="fa-solid fa-users"></i> Usuários
+                </a>
+                <a href="../../sprint 02/tela_login/tela_login.html">
+                    <i class="fa-solid fa-right-from-bracket"></i> Sair
+                </a>
+
+            </nav>
+        </div>
+        <footer>
+            <p>&copy; Versão 5.0<br>Equipe TDS/IFPI</p>
+            <br>
+        </footer>
+    </aside>
+
+    <main>
+        <header>
+            <h1>Administrador - RU IFPI</h1>
+            <div class="search">
+                <input type="text" id="campoBusca" placeholder="Buscar..." />
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="usuario">👤 Administrador Logado</div>
+        </header>
+
+        <section class="cards">
+            <div class="card">
+                <i class="fa-solid fa-user-gear"></i>
+                <h3>Gerenciar Usuários</h3>
+                <p>Controle cadastros, permissões e acessos.</p>
+                <a href="../../sprint 05/tela_gerenciarPerfil/tela_gerenciarPerfil.html" class="btn">Acessar</a>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-bullhorn"></i>
+                <h3>Enviar Avisos</h3>
+                <p>Comunique-se com alunos e funcionários.</p>
+                <a href="../../sprint 04/tela_enviarAvisos/tela_enviarAvisos.html" class="btn">Acessar</a>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-utensils"></i>
+                <h3>Inserir Alimentos</h3>
+                <p>Gerencie o cardápio e estoque.</p>
+                <a href="../../sprint 03/tela_inserirAlimento/tela_inserirAlimento.html" class="btn">Acessar</a>
+            </div>
+
+        </section>
+
+        <section class="cards">
+            <!-- informativos extras -->
+            <div class="card">
+                <h3>Horário de funcionamento</h3>
+                <p class = "p1">11:30 - 13:30</p>
+                <p class = "p1">17:00 - 19:00</p>
+                <div class="status-ru">
+                    <span class="status-label">Status:</span>
+                    <span id="statusRU">⏳ Verificando...</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Cardápios Ativos</h3>
+                <p class = "p1">5</p>
+            </div>
+
+            <div class="card">
+                <h3>Avisos Publicados</h3>
+                <p class = "p1">2</p>
+            </div>
+
+            <div class="card">
+                <h3>Estoque Atualizado</h3>
+                <p><i class="fa-solid fa-circle-check"></i></p>
+            </div>
+        </section>
+
+        <section class="activities">
+            <h3>Atualizações do Sistema</h3>
+            <ul>
+                <li>[Domingo, 09/11] Relatório de consumo diário gerado automaticamente.</li>
+                <li>[Domingo, 09/11] Aviso de manutenção publicado pela administração.</li>
+                <li>[Segunda, 17/11] Cardápio da semana registrado pela equipe do RU.</li>
+            </ul>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

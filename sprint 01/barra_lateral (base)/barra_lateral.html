@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Painel do Restaurante Universitário - Cardápios, avisos e estoque atualizado." />
+    <title>CardapiOn.IFPI - Painel</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="barra_lateral.css">
+
+    <script src="barra_lateral.js" defer></script>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <aside>
+        <div>
+            <h2>CardapiOn</h2>
+            <nav>
+                <a href="#">🏠 Início</a>
+                <a href="#">📋 Cardápio</a>
+                <a href="#">📢 Avisos</a>
+                <a href="#">📊 Relatórios</a>
+                <a href="#">🔐 Login</a>
+            </nav>
+        </div>
+        <footer>
+            <p>&copy; Versão 3.0<br>Equipe TDS/IFPI</p>
+            <br>
+        </footer>
+    </aside>
+
+    <main>
+        <header>
+            <h1>Funcionário - RU IFPI</h1>
+            <div class="search">
+                <input type="text" id="campoBusca" placeholder="Buscar..." />
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="usuario">👤 Funcionário Logado</div>
+        </header>
+
+        <section class="dashboard">
+            <h2>📊 Painel do Administrador</h2>
+
+            <div class="cards">
+                <div class="card">👥 Usuários: 120</div>
+                <div class="card">👨‍💼 Funcionários: 8</div>
+                <div class="card">🧾 Alimentos: 45</div>
+                <div class="card">📢 Avisos ativos: 3</div>
+            </div>
+
+            <h3>Últimos Avisos</h3>
+            <ul>
+                <li>📢 "Cardápio especial de sexta-feira" - publicado ontem</li>
+                <li>📢 "Fechado no feriado" - publicado há 2 dias</li>
+            </ul>
+
+            <h3>Acesso rápido</h3>
+            <div class="atalhos">
+                <button>+ Novo Funcionário</button>
+                <button>+ Novo Alimento</button>
+                <button>+ Novo Aviso</button>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

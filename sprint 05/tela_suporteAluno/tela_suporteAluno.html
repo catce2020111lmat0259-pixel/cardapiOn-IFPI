@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Painel do Restaurante Universitário - Cardápios, avisos e estoque atualizado." />
+    <title>CardapiOn.IFPI - Painel</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="tela_suporteAluno.css">
+
+    <script src="tela_suporteAluno.js" defer></script>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <aside>
+        <div>
+            <h2>CardapiOn</h2>
+            <nav>
+                <nav class="menu-principal">
+                    <a href="../../sprint 03/tela_inicial/tela_inicial_Alu.html"><i class="fa-solid fa-house"></i>
+                        Início</a>
+                    <a href="../../sprint 02/tela_cardapio/tela_cardapio.html"><i
+                            class="fa-solid fa-clipboard-list"></i> Cardápio</a>
+                    <a href="../../sprint 05/tela_suporteAluno/tela_suporteAluno.html"><i class="fa-solid fa-headset"></i>
+                        Suporte</a>
+                    <a href="../../sprint 02/tela_login/tela_login.html"><i class="fa-solid fa-right-from-bracket"></i>
+                        Sair</a>
+                </nav>
+
+            </nav>
+        </div>
+        <footer>
+            <p>&copy; Versão 5.0<br>Equipe TDS/IFPI</p>
+            <br>
+        </footer>
+    </aside>
+
+    <main>
+        <header>
+            <h1>Restaurante Universitário</h1>
+            <div class="search">
+                <input type="text" id="campoBusca" placeholder="Buscar..." />
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="usuario">👤 Aluno Logado</div>
+        </header>
+
+        <!-- suporte -->
+        <section class="suporte-chat">
+            <h2>Suporte ao Aluno</h2>
+
+            <!-- mensagens -->
+            <div class="chat-window" id="chatWindow">
+                <div class="mensagem bot">👋 Olá! Sou o assistente do RU.</div>
+            </div>
+
+            <!-- entrada -->
+            <div class="chat-input">
+                <input type="text" id="chatMessage" placeholder="Digite sua mensagem..." />
+                <button id="sendMessage"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+
+            <!-- encaminhamento -->
+            <div class="chat-footer">
+                <p>Se sua dúvida não for resolvida aqui, ela será encaminhada para o suporte real via e-mail.</p>
+            </div>
+
+            <div class="status-sistema">
+                <h3><i class="fa-solid fa-magnifying-glass"></i> Status do Sistema</h3>
+                <ul>
+                    <li><i class="fa-solid fa-circle-check"></i> Sistema operacional: funcionando normalmente</li>
+                    <li><i class="fa-solid fa-user-lock"></i> Login: sem falhas detectadas</li>
+                    <li><i class="fa-solid fa-wifi"></i> Conexão com RU: ativa</li>
+                    <li><i class="fa-solid fa-rotate"></i> Última atualização: 05/12/2025 às 11:45</li>
+                </ul>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

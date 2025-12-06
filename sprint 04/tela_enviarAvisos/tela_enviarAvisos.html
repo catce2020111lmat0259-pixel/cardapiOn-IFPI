@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Painel do Restaurante Universitário - Cardápios, avisos e estoque atualizado." />
+    <title>CardapiOn.IFPI - Administrador</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="tela_enviarAvisos.css">
+
+    <script src="tela_enviarAvisos.js" defer></script>
+
+</head>
+
+<body>
+    <aside>
+        <div>
+            <h2>CardapiOn</h2>
+            <nav>
+                <a href="../../sprint 03/tela_inicial/tela_inicial_Adm.html">
+                    <i class="fa-solid fa-house"></i> Início
+                </a>
+                <a href="../../sprint 03/tela_inserirAlimento/tela_inserirAlimento.html">
+                    <i class="fa-solid fa-receipt"></i> Alimentos
+                </a>
+                <a href="../../sprint 04/tela_enviarAvisos/tela_enviarAvisos.html">
+                    <i class="fa-solid fa-bullhorn"></i> Avisos
+                </a>
+                <a href="../../sprint 05/tela_gerenciarPerfil/tela_gerenciarPerfil.html">
+                    <i class="fa-solid fa-users"></i> Usuários
+                </a>
+                <a href="../../sprint 02/tela_login/tela_login.html">
+                    <i class="fa-solid fa-right-from-bracket"></i> Sair
+                </a>
+            </nav>
+        </div>
+        <footer>
+            <p>&copy; Versão 4.0<br>Equipe TDS/IFPI</p>
+            <br>
+        </footer>
+    </aside>
+
+    <!-- cadastrar novo aviso -->
+
+    <main>
+        <header>
+            <h1>Administrador - RU IFPI</h1>
+            <div class="search">
+                <input type="text" id="campoBusca" placeholder="Buscar..." />
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="usuario">👤 Administrador Logado</div>
+        </header>
+
+        <section id="avisos">
+
+            <!-- tradução das cores -->
+            <div class="legenda-cores">
+                <h3>Status dos Avisos</h3>
+                <ul>
+                    <li><span class="bola verde"></span>
+                        <strong>Publicado</strong> —
+                        visível para todos os usuários
+                    </li>
+                    <li><span class="bola amarelo"></span>
+                        <strong>Em análise</strong> —
+                        aguardando validação
+                    </li>
+                    <li><span class="bola vermelho"></span>
+                        <strong>Indeferido / Inválido / Expirado</strong> —
+                        não será publicado
+                    </li>
+                </ul>
+            </div>
+
+            <!-- acesso ao modal -->
+            <div class="avisos-header">
+                <button id="btnNovoAviso" class="btn-cadastrar">+ Cadastrar novo aviso</button>
+            </div>
+
+            <!-- análise -->
+            <div class="avisos-bloco">
+                <h2>Avisos aguardando publicação</h2>
+                <div id="avisosPendentes" class="lista-avisos">
+                    <div class="card-aviso amarelo">
+                        <span class="bola amarelo"></span>
+                        <div class="conteudo-aviso">
+                            <strong>Alteração no cardápio</strong>
+                            <p>Cardápio de sexta alterado para peixe assado.</p>
+                        </div>
+                        <div class="acoes-aviso">
+                            <button class="btn-publicar">Publicar</button>
+                            <button class="btn-indeferir">Indeferir</button>
+                        </div>
+                    </div>
+
+                    <div class="card-aviso amarelo">
+                        <span class="bola amarelo"></span>
+                        <div class="conteudo-aviso">
+                            <strong>Feriado</strong>
+                            <p>O RU não funcionará na próxima segunda-feira devido ao feriado institucional.</p>
+                        </div>
+                        <div class="acoes-aviso">
+                            <button class="btn-publicar">Publicar</button>
+                            <button class="btn-indeferir">Indeferir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- publicados -->
+            <div class="avisos-bloco">
+                <h2>Avisos publicados</h2>
+                <div id="avisosPublicados" class="lista-avisos">
+                    <div class="card-aviso verde">
+                        <span class="bola verde"></span>
+                        <div class="conteudo-aviso">
+                            <strong>Manutenção concluída</strong>
+                            <p>Sistema disponível normalmente a partir de amanhã.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-aviso verde">
+                        <span class="bola verde"></span>
+                        <div class="conteudo-aviso">
+                            <strong>Cardápio especial de Natal</strong>
+                            <p>Na semana do Natal, o RU servirá pratos típicos como arroz à grega e peru assado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- indeferidos / expirados -->
+            <div class="avisos-bloco">
+                <h2>Avisos indeferidos / expirados</h2>
+                <div id="avisosInvalidos" class="lista-avisos">
+                    <div class="card-aviso vermelho">
+                        <span class="bola vermelho"></span>
+                        <div class="conteudo-aviso">
+                            <strong>Aviso inválido</strong>
+                            <p>Informação duplicada ou incorreta.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="modalAviso" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar-modal">&times;</span>
+            <h2>Novo aviso</h2>
+            <label>Título:</label>
+            <input type="text" id="modalTitulo" required />
+            <label>Descrição:</label>
+            <textarea id="modalDescricao" required></textarea>
+            <button id="btnSalvarModal">Salvar</button>
+            <div id="modalMensagem"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

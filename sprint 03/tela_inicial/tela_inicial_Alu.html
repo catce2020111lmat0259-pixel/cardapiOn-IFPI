@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Painel do Restaurante Universitário - Cardápios, avisos e estoque atualizado." />
+    <title>CardapiOn.IFPI - Painel</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="tela_inicial_Alu.css">
+
+    <script src="tela_inicial_Alu.js" defer></script>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <aside>
+        <div>
+            <h2>CardapiOn</h2>
+            <nav>
+                <a href="../../sprint 03/tela_inicial/tela_inicial_Alu.html"><i class="fa-solid fa-house"></i>
+                    Início</a>
+                <a href="../../sprint 02/tela_cardapio/tela_cardapio.html"><i class="fa-solid fa-clipboard-list"></i>
+                    Cardápio</a>
+                <a href="../../sprint 05/tela_suporteAluno/tela_suporteAluno.html"><i class="fa-solid fa-headset"></i>
+                    Suporte</a>
+                <a href="../../sprint 02/tela_login/tela_login.html"><i class="fa-solid fa-right-from-bracket"></i>
+                    Sair</a>
+            </nav>
+        </div>
+        <footer>
+            <p>&copy; Versão 5.0<br>Equipe TDS/IFPI</p>
+            <br>
+        </footer>
+    </aside>
+
+    <main>
+        <header>
+            <h1>Restaurante Universitário</h1>
+            <div class="search">
+                <input type="text" id="campoBusca" placeholder="Buscar..." />
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="usuario">👤 Aluno Logado</div>
+        </header>
+
+        <section class="cards">
+            <div class="card">
+                <h3>Horário de funcionamento</h3>
+                <p>11:30 - 13:30</p>
+                <p>17:00 - 19:00</p>
+                <div class="status-ru">
+                    <span class="status-label">Status:</span>
+                    <span id="statusRU">⏳ Verificando...</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Cardápios Ativos</h3>
+                <p>5</p>
+            </div>
+            <div class="card">
+                <h3>Avisos Publicados</h3>
+                <p>2</p>
+            </div>
+            <div class="card">
+                <h3>Estoque Atualizado</h3>
+                <p>✔️</p>
+            </div>
+        </section>
+
+        <section class="avisos">
+            <h3><i class="fa-solid fa-bullhorn"></i> Avisos</h3>
+            <ul>
+                <li>📢 Dia 06/12: RU fechado para manutenção.</li>
+                <li>📢 Cardápio especial de fim de ano disponível na aba Cardápio.</li>
+                <li>📢 Horário estendido na próxima semana (11:00 às 14:00).</li>
+            </ul>
+
+        </section>
+
+        <section class="activities">
+            <h3>Atualizações do Sistema</h3>
+            <ul>
+                <li>[Domingo, 09/12] Aviso de manutenção publicado pela administração.</li>
+                <li>[Segunda, 01/12] Cardápio da semana registrado pela equipe do RU.</li>
+            </ul>
+        </section>
+    </main>
+
+</body>
+
+</html>

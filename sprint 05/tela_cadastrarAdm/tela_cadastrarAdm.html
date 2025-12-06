@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Painel do Restaurante Universitário - Cardápios, avisos e estoque atualizado." />
+    <title>CardapiOn.IFPI - Painel</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="tela_cadastrarAdm.css">
+
+    <script src="tela_cadastrarAdm.js" defer></script>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <aside>
+        <div>
+            <h2>CardapiOn</h2>
+            <nav>
+                <a href="../../sprint 03/tela_inicial/tela_inicial_Adm.html">
+                    <i class="fa-solid fa-house"></i> Início
+                </a>
+                <a href="../../sprint 03/tela_inserirAlimento/tela_inserirAlimento.html">
+                    <i class="fa-solid fa-receipt"></i> Alimentos
+                </a>
+                <a href="../../sprint 04/tela_enviarAvisos/tela_enviarAvisos.html">
+                    <i class="fa-solid fa-bullhorn"></i> Avisos
+                </a>
+                <a href="../../sprint 05/tela_gerenciarPerfil/tela_gerenciarPerfil.html">
+                    <i class="fa-solid fa-users"></i> Usuários
+                </a>
+                <a href="../../sprint 02/tela_login/tela_login.html">
+                    <i class="fa-solid fa-right-from-bracket"></i> Sair
+                </a>
+            </nav>
+        </div>
+        <footer>
+            <p>&copy; Versão 3.0<br>Equipe TDS/IFPI</p>
+            <br>
+        </footer>
+    </aside>
+
+    <main>
+        <header>
+            <h1>Administrador - RU IFPI</h1>
+            <div class="search">
+                <input type="text" id="campoBusca" placeholder="Buscar..." />
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="usuario">👤 Administrador Logado</div>
+        </header>
+
+        <!-- add administrador -->
+        <section id="administradores">
+            <form class="form-adm">
+                <h2>Adicionar Administrador</h2>
+
+                <div class="campo">
+                    <label for="nome" class="obrigatorio">Nome</label>
+                    <input type="text" id="nome" required />
+                </div>
+
+                <div class="campo">
+                    <label for="email" class="obrigatorio">E-mail</label>
+                    <input type="email" id="email" required />
+                </div>
+
+                <div class="campo">
+                    <label for="nivelAcesso" class="obrigatorio">Nível de Acesso</label>
+                    <select id="nivelAcesso" required>
+                        <option value="">Selecione</option>
+                        <option value="super">Super Admin</option>
+                        <option value="gestor">Gestor</option>
+                        <option value="moderador">Moderador</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label>Permissões</label>
+                    <div class="checkboxes">
+                        <label><input type="checkbox" value="usuarios" /> Gerenciar Usuários</label>
+                        <label><input type="checkbox" value="cardapios" /> Editar Cardápios</label>
+                        <label><input type="checkbox" value="relatorios" /> Acessar Relatórios</label>
+                        <label><input type="checkbox" value="configuracoes" /> Configurações do Sistema</label>
+                    </div>
+                </div>
+
+                <div class="botoes">
+                    <button type="button" class="btn-salvar">Cadastrar</button>
+                    <button type="button" class="btn-cancelar">Cancelar</button>
+                </div>
+
+                <div id="mensagemStatus"></div>
+
+                <!-- cadastro bem sucedido -->
+                <div id="dadosGerados" class="box-dados"></div>
+
+                <!-- botão extra -->
+                <div class="botao-extra">
+                    <button type="button" id="btnNovo">Novo Administrador</button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

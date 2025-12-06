@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CardapiOn - Funcionário</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="tela_avisos.css" />
+    
+    <script src="tela_avisos.js" defer></script>
+</head>
+
+<body>
+    <aside>
+        <div>
+            <h2>CardapiOn</h2>
+            <nav>
+                <a href="../../sprint 03/tela_inicial/tela_inicial_Fun.html">
+                    <i class="fa-solid fa-house"></i> Início
+                </a>
+                <a href="../../sprint 05/tela_montarCardapio/tela_montarCardapio.html">
+                    <i class="fa-solid fa-clipboard-list"></i> Montar Cardápio
+                </a>
+                <a href="../../sprint 02/tela_avisos/tela_avisos.html">
+                    <i class="fa-solid fa-bullhorn"></i> Editar Avisos
+                </a>
+                <a href="../../sprint 02/tela_login/tela_login.html">
+                    <i class="fa-solid fa-right-from-bracket"></i> Login
+                </a>
+            </nav>
+        </div>
+        <footer>
+            <p>&copy; Versão 5.0<br>Equipe TDS/IFPI</p>
+            <br>
+        </footer>
+    </aside>
+
+    <main>
+        <header>
+            <h1>Funcionário - RU IFPI</h1>
+            <div class="search">
+                <input type="text" placeholder="Buscar funcionalidades..." />
+            </div>
+            <div class="usuario">👤 Funcionário Logado</div>
+        </header>
+
+        <section id="avisos" class="secao">
+            <h1>Gerenciar Avisos</h1>
+
+            <textarea placeholder="Digite o aviso aqui..."></textarea>
+            <button>Salvar</button>
+            <div id="confirmacao" style="display:none; margin-top: 10px; color: green;">
+                ✅ Aviso salvo com sucesso! Logo os alunos poderão visualizar na tela inicial.
+            </div>
+
+            <h2>Avisos Publicados</h2>
+            <ul class="avisos-lista">
+                <li>
+                    <strong>📢 O jantar de hoje será servido mais cedo.</strong><br />
+                    <small>Observação: mudança temporária devido à manutenção na cozinha.</small><br />
+                    <button class="editar">Editar</button>
+                    <button class="excluir">Excluir</button>
+                </li>
+
+                <li>
+                    <strong>📢 O almoço de hoje será servido com opção vegetariana especial.</strong><br />
+                    <small>Observação: inclusão feita a pedido dos alunos durante a semana da nutrição.</small><br />
+                    <button class="editar">Editar</button>
+                    <button class="excluir">Excluir</button>
+                </li>
+
+                <li>
+                    <strong>📢 O refeitório estará fechado amanhã devido ao feriado nacional.</strong><br />
+                    <small>Observação: funcionamento normal retorna no próximo dia útil.</small><br />
+                    <button class="editar">Editar</button>
+                    <button class="excluir">Excluir</button>
+                </li>
+            </ul>
+            <p style="margin-top: 30px; font-size: 14px; color: #555;">
+                Os avisos publicados serão exibidos automaticamente na tela inicial dos alunos.
+            </p>
+        </section>
+
+        <section id="relatorios" class="secao" style="display:none;">
+            <h1>Relatórios</h1>
+            <p>Simulação de geração de relatórios...</p>
+        </section>
+
+        <section id="cardapio" class="secao" style="display:none;">
+            <h1>Gerenciar Cardápio</h1>
+            <p>Editar cardápio semanal...</p>
+        </section>
+
+        <section id="sair" class="secao" style="display:none;">
+            <h1>Encerrar Sessão</h1>
+            <p>Você saiu do sistema.</p>
+        </section>
+    </main>
+</body>
+
+</html>

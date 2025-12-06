@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CardapiOn.IFPI - Painel</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="tela_historicoRefeicoes.css">
+
+    <script src="tela_historicoRefeicoes.js" defer></script>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <aside>
+        <div>
+            <h2>CardapiOn</h2>
+            <nav>
+                <a href="../../sprint 03/tela_inicial/tela_inicial_Alu.html">🏠 Início</a>
+                <a href="../../sprint 02/tela_cardapio/tela_cardapio.html">📋 Cardápio</a>
+                <a href="../../sprint 02/tela_login/tela_login.html">🔐 Sair</a>
+            </nav>
+        </div>
+        <footer>
+            <p>&copy; Versão 3.0<br>Equipe TDS/IFPI</p>
+            <br>
+        </footer>
+    </aside>
+
+    <main>
+        <header>
+            <h1>Histórico de Refeições - RU IFPI</h1>
+            <div class="search">
+                <input type="text" id="campoBusca" placeholder="Buscar..." />
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="usuario">👤 Aluno Logado</div>
+        </header>
+
+        <section class="historico">
+            <h2>Últimas Refeições</h2>
+
+            <div class="filtros">
+                <button class="filtro ativo">Hoje</button>
+                <button class="filtro">Últimos 7 dias</button>
+                <button class="filtro">Este mês</button>
+                <button class="filtro">Intervalo personalizado</button>
+                <div class="intervalo-personalizado">
+                    <input type="date" id="dataInicio" />
+                    <span>até</span>
+                    <input type="date" id="dataFim" />
+                    <button class="filtro">Aplicar</button>
+                </div>
+            </div>
+
+            <div class="mensagem-carregando">🔄 Carregando histórico...</div>
+
+            <div class="mensagem-vazio" style="display: none;">Nenhum histórico disponível.</div>
+
+            <div class="mensagem-sem-resultado" style="display: none;">Nenhum resultado para o período selecionado.
+            </div>
+
+            <ul class="lista-refeicoes">
+                <!-- js -->
+            </ul>
+
+            <div class="exportar">
+                <button>📤 Exportar PDF</button>
+                <button>📤 Exportar CSV</button>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

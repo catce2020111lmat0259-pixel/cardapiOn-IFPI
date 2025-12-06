@@ -1,0 +1,113 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    min-height: 100vh;
+    color: #333;
+    margin: 0;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background: #1b5e20;
+    color: white;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+aside>div {
+    padding-top: 30px;
+}
+
+aside h2 {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 15px 0;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: #2e7d32;
+}
+
+aside footer {
+    font-size: 12px;
+    color: #ddd;
+    text-align: center;
+}
+
+/* principal geral */
+main {
+    margin-left: 260px;
+    padding: 30px;
+    flex-grow: 1;
+    width: calc(100% - 260px);
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* pesquisa */
+.search {
+  position: relative;
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.search input {
+  padding: 10px 36px 10px 12px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+.search-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  font-size: 1.1em;
+}
+
+.usuario {
+    font-weight: bold;
+}

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Painel do Restaurante Universitário - Cardápios, avisos e estoque atualizado." />
+    <title>CardapiOn.IFPI - Painel</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="tela_montarCardapio.css">
+
+    <script src="../../sprint 03/dadosAlimentos/dadosAlimentos.js" defer></script>
+    <script src="tela_montarCardapio.js" defer></script>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <aside>
+        <div>
+            <h2>CardapiOn</h2>
+            <nav>
+                <a href="../../sprint 03/tela_inicial/tela_inicial_Fun.html">
+                    <i class="fa-solid fa-house"></i> Início
+                </a>
+                <a href="../../sprint 05/tela_montarCardapio/tela_montarCardapio.html">
+                    <i class="fa-solid fa-clipboard-list"></i> Montar Cardápio
+                </a>
+                <a href="../../sprint 02/tela_avisos/tela_avisos.html">
+                    <i class="fa-solid fa-bullhorn"></i> Editar Avisos
+                </a>
+                <a href="../../sprint 02/tela_login/tela_login.html">
+                    <i class="fa-solid fa-right-from-bracket"></i> Login
+                </a>
+            </nav>
+        </div>
+        <footer>
+            <p>&copy; Versão 5.0<br>Equipe TDS/IFPI</p>
+            <br>
+        </footer>
+    </aside>
+
+    <main>
+        <header>
+            <h1>Funcionário - RU IFPI</h1>
+            <div class="search">
+                <input type="text" id="campoBusca" placeholder="Buscar..." />
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="usuario">👤 Funcionário Logado</div>
+        </header>
+
+        <section id="modulo-cardapio">
+            <h2>Montar Cardápio da Semana</h2>
+
+            <form id="form-cardapio">
+
+                <!-- segunda-feira -->
+                <div class="dia-cardapio" data-dia="segunda">
+                    <h3>Segunda-feira</h3>
+
+                    <div class="linha-refeicao">
+                        <!-- almoço -->
+                        <div class="refeicao" data-refeicao="almoco">
+                            <h4>🍽️ ALMOÇO</h4>
+
+                            <div class="bloco-refeicao">
+                                <div class="categorias">
+                                    <button type="button" data-categoria="Grãos">Grãos</button>
+                                    <button type="button" data-categoria="Carnes">Carnes</button>
+                                    <button type="button" data-categoria="Hortaliças">Hortaliças</button>
+                                    <button type="button" data-categoria="Massas">Massas</button>
+                                    <button type="button" data-categoria="Sobremesas">Sobremesas</button>
+                                    <button type="button" data-categoria="Outros">Outros</button>
+                                </div>
+
+                                <div class="painel-e-preview">
+                                    <!-- seleção -->
+                                    <div class="painel-selecao">
+                                        <h5>Selecionar <span class="nome-categoria"></span></h5>
+                                        <div class="checkboxes-categoria"></div>
+                                        <button type="button" class="fechar-painel">Fechar</button>
+                                    </div>
+
+                                    <!-- selecionados -->
+                                    <div class="preview-refeicao">
+                                        <h5>Selecionados</h5>
+                                        <ul class="lista-refeicao" data-dia="segunda" data-refeicao="almoco"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- jantar -->
+                        <div class="refeicao" data-refeicao="jantar">
+                            <h4>🍽️ JANTAR</h4>
+
+                            <div class="bloco-refeicao">
+                                <div class="categorias">
+                                    <button type="button" data-categoria="Grãos">Grãos</button>
+                                    <button type="button" data-categoria="Carnes">Carnes</button>
+                                    <button type="button" data-categoria="Hortaliças">Hortaliças</button>
+                                    <button type="button" data-categoria="Massas">Massas</button>
+                                    <button type="button" data-categoria="Sobremesas">Sobremesas</button>
+                                    <button type="button" data-categoria="Outros">Outros</button>
+                                </div>
+
+                                <div class="painel-e-preview">
+                                    <!-- seleção -->
+                                    <div class="painel-selecao">
+                                        <h5>Selecionar <span class="nome-categoria"></span></h5>
+                                        <div class="checkboxes-categoria"></div>
+                                        <button type="button" class="fechar-painel">Fechar</button>
+                                    </div>
+
+                                    <!-- selecionados -->
+                                    <div class="preview-refeicao">
+                                        <h5>Selecionados</h5>
+                                        <ul class="lista-refeicao" data-dia="segunda" data-refeicao="jantar"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- terça-feira -->
+                <div class="dia-cardapio" data-dia="terca">
+                    <h3>Terça-feira</h3>
+                    <div class="linha-refeicao">
+                        <!-- almoço -->
+                        <div class="refeicao" data-refeicao="almoco">
+                            <h4>🍽️ ALMOÇO</h4>
+
+                            <div class="bloco-refeicao">
+                                <div class="categorias">
+                                    <button type="button" data-categoria="Grãos">Grãos</button>
+                                    <button type="button" data-categoria="Carnes">Carnes</button>
+                                    <button type="button" data-categoria="Hortaliças">Hortaliças</button>
+                                    <button type="button" data-categoria="Massas">Massas</button>
+                                    <button type="button" data-categoria="Sobremesas">Sobremesas</button>
+                                    <button type="button" data-categoria="Outros">Outros</button>
+                                </div>
+
+                                <div class="painel-e-preview">
+                                    <!-- seleção -->
+                                    <div class="painel-selecao">
+                                        <h5>Selecionar <span class="nome-categoria"></span></h5>
+                                        <div class="checkboxes-categoria"></div>
+                                        <button type="button" class="fechar-painel">Fechar</button>
+                                    </div>
+
+                                    <!-- selecionados -->
+                                    <div class="preview-refeicao">
+                                        <h5>Selecionados</h5>
+                                        <ul class="lista-refeicao" data-dia="terca" data-refeicao="almoco"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- jantar -->
+                        <div class="refeicao" data-refeicao="jantar">
+                            <h4>🍽️ JANTAR</h4>
+
+                            <div class="bloco-refeicao">
+                                <div class="categorias">
+                                    <button type="button" data-categoria="Grãos">Grãos</button>
+                                    <button type="button" data-categoria="Carnes">Carnes</button>
+                                    <button type="button" data-categoria="Hortaliças">Hortaliças</button>
+                                    <button type="button" data-categoria="Massas">Massas</button>
+                                    <button type="button" data-categoria="Sobremesas">Sobremesas</button>
+                                    <button type="button" data-categoria="Outros">Outros</button>
+                                </div>
+
+                                <div class="painel-e-preview">
+                                    <!-- seleção -->
+                                    <div class="painel-selecao">
+                                        <h5>Selecionar <span class="nome-categoria"></span></h5>
+                                        <div class="checkboxes-categoria"></div>
+                                        <button type="button" class="fechar-painel">Fechar</button>
+                                    </div>
+
+                                    <!-- selecionados -->
+                                    <div class="preview-refeicao">
+                                        <h5>Selecionados</h5>
+                                        <ul class="lista-refeicao" data-dia="terca" data-refeicao="jantar"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- quarta-feira -->
+                <div class="dia-cardapio" data-dia="quarta">
+                    <h3>Quarta-feira</h3>
+                    <div class="linha-refeicao">
+                        <!-- almoço -->
+                        <div class="refeicao" data-refeicao="almoco">
+                            <h4>🍽️ ALMOÇO</h4>
+
+                            <div class="bloco-refeicao">
+                                <div class="categorias">
+                                    <button type="button" data-categoria="Grãos">Grãos</button>
+                                    <button type="button" data-categoria="Carnes">Carnes</button>
+                                    <button type="button" data-categoria="Hortaliças">Hortaliças</button>
+                                    <button type="button" data-categoria="Massas">Massas</button>
+                                    <button type="button" data-categoria="Sobremesas">Sobremesas</button>
+                                    <button type="button" data-categoria="Outros">Outros</button>
+                                </div>
+
+                                <div class="painel-e-preview">
+                                    <!-- seleção -->
+                                    <div class="painel-selecao">
+                                        <h5>Selecionar <span class="nome-categoria"></span></h5>
+                                        <div class="checkboxes-categoria"></div>
+                                        <button type="button" class="fechar-painel">Fechar</button>
+                                    </div>
+
+                                    <!-- selecionados -->
+                                    <div class="preview-refeicao">
+                                        <h5>Selecionados</h5>
+                                        <ul class="lista-refeicao" data-dia="quarta" data-refeicao="almoco"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- jantar -->
+                        <div class="refeicao" data-refeicao="jantar">
+                            <h4>🍽️ JANTAR</h4>
+
+                            <div class="bloco-refeicao">
+                                <div class="categorias">
+                                    <button type="button" data-categoria="Grãos">Grãos</button>
+                                    <button type="button" data-categoria="Carnes">Carnes</button>
+                                    <button type="button" data-categoria="Hortaliças">Hortaliças</button>
+                                    <button type="button" data-categoria="Massas">Massas</button>
+                                    <button type="button" data-categoria="Sobremesas">Sobremesas</button>
+                                    <button type="button" data-categoria="Outros">Outros</button>
+                                </div>
+
+                                <div class="painel-e-preview">
+                                    <!-- seleção -->
+                                    <div class="painel-selecao">
+                                        <h5>Selecionar <span class="nome-categoria"></span></h5>
+                                        <div class="checkboxes-categoria"></div>
+                                        <button type="button" class="fechar-painel">Fechar</button>
+                                    </div>
+
+                                    <!-- selecionados -->
+                                    <div class="preview-refeicao">
+                                        <h5>Selecionados</h5>
+                                        <ul class="lista-refeicao" data-dia="quarta" data-refeicao="jantar"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- quinta-feira -->
+                <div class="dia-cardapio" data-dia="quinta">
+                    <h3>Quinta-feira</h3>
+                    <div class="linha-refeicao">
+                        <!-- almoço -->
+                        <div class="refeicao" data-refeicao="almoco">
+                            <h4>🍽️ ALMOÇO</h4>
+
+                            <div class="bloco-refeicao">
+                                <div class="categorias">
+                                    <button type="button" data-categoria="Grãos">Grãos</button>
+                                    <button type="button" data-categoria="Carnes">Carnes</button>
+                                    <button type="button" data-categoria="Hortaliças">Hortaliças</button>
+                                    <button type="button" data-categoria="Massas">Massas</button>
+                                    <button type="button" data-categoria="Sobremesas">Sobremesas</button>
+                                    <button type="button" data-categoria="Outros">Outros</button>
+                                </div>
+
+                                <div class="painel-e-preview">
+                                    <!-- seleção -->
+                                    <div class="painel-selecao">
+                                        <h5>Selecionar <span class="nome-categoria"></span></h5>
+                                        <div class="checkboxes-categoria"></div>
+                                        <button type="button" class="fechar-painel">Fechar</button>
+                                    </div>
+
+                                    <!-- selecionados -->
+                                    <div class="preview-refeicao">
+                                        <h5>Selecionados</h5>
+                                        <ul class="lista-refeicao" data-dia="quinta" data-refeicao="almoco"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- jantar -->
+                        <div class="refeicao" data-refeicao="jantar">
+                            <h4>🍽️ JANTAR</h4>
+
+                            <div class="bloco-refeicao">
+                                <div class="categorias">
+                                    <button type="button" data-categoria="Grãos">Grãos</button>
+                                    <button type="button" data-categoria="Carnes">Carnes</button>
+                                    <button type="button" data-categoria="Hortaliças">Hortaliças</button>
+                                    <button type="button" data-categoria="Massas">Massas</button>
+                                    <button type="button" data-categoria="Sobremesas">Sobremesas</button>
+                                    <button type="button" data-categoria="Outros">Outros</button>
+                                </div>
+
+                                <div class="painel-e-preview">
+                                    <!-- seleção -->
+                                    <div class="painel-selecao">
+                                        <h5>Selecionar <span class="nome-categoria"></span></h5>
+                                        <div class="checkboxes-categoria"></div>
+                                        <button type="button" class="fechar-painel">Fechar</button>
+                                    </div>
+
+                                    <!-- selecionados -->
+                                    <div class="preview-refeicao">
+                                        <h5>Selecionados</h5>
+                                        <ul class="lista-refeicao" data-dia="quinta" data-refeicao="jantar"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- sexta-feira -->
+                <div class="dia-cardapio" data-dia="sexta">
+                    <h3>Sexta-feira</h3>
+                    <div class="linha-refeicao">
+                        <!-- almoço -->
+                        <div class="refeicao" data-refeicao="almoco">
+                            <h4>🍽️ ALMOÇO</h4>
+
+                            <div class="bloco-refeicao">
+                                <div class="categorias">
+                                    <button type="button" data-categoria="Grãos">Grãos</button>
+                                    <button type="button" data-categoria="Carnes">Carnes</button>
+                                    <button type="button" data-categoria="Hortaliças">Hortaliças</button>
+                                    <button type="button" data-categoria="Massas">Massas</button>
+                                    <button type="button" data-categoria="Sobremesas">Sobremesas</button>
+                                    <button type="button" data-categoria="Outros">Outros</button>
+                                </div>
+
+                                <div class="painel-e-preview">
+                                    <!-- seleção -->
+                                    <div class="painel-selecao">
+                                        <h5>Selecionar <span class="nome-categoria"></span></h5>
+                                        <div class="checkboxes-categoria"></div>
+                                        <button type="button" class="fechar-painel">Fechar</button>
+                                    </div>
+
+                                    <!-- selecionados -->
+                                    <div class="preview-refeicao">
+                                        <h5>Selecionados</h5>
+                                        <ul class="lista-refeicao" data-dia="sexta" data-refeicao="almoco"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- jantar -->
+                        <div class="refeicao" data-refeicao="jantar">
+                            <h4>🍽️ JANTAR</h4>
+
+                            <div class="bloco-refeicao">
+                                <div class="categorias">
+                                    <button type="button" data-categoria="Grãos">Grãos</button>
+                                    <button type="button" data-categoria="Carnes">Carnes</button>
+                                    <button type="button" data-categoria="Hortaliças">Hortaliças</button>
+                                    <button type="button" data-categoria="Massas">Massas</button>
+                                    <button type="button" data-categoria="Sobremesas">Sobremesas</button>
+                                    <button type="button" data-categoria="Outros">Outros</button>
+                                </div>
+
+                                <div class="painel-e-preview">
+                                    <!-- seleção -->
+                                    <div class="painel-selecao">
+                                        <h5>Selecionar <span class="nome-categoria"></span></h5>
+                                        <div class="checkboxes-categoria"></div>
+                                        <button type="button" class="fechar-painel">Fechar</button>
+                                    </div>
+
+                                    <!-- selecionados -->
+                                    <div class="preview-refeicao">
+                                        <h5>Selecionados</h5>
+                                        <ul class="lista-refeicao" data-dia="sexta" data-refeicao="jantar"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- confirmações -->
+                <div class="acoes-cardapio">
+                    <button type="submit">✅ Salvar Cardápio</button>
+                    <button type="reset">❌ Limpar</button>
+                </div>
+            </form>
+
+            <!-- mensagem após salvar e resultaado -->
+            <div class="overlay" id="notificacao" style="display:none;">
+                <div class="mensagem">
+                    <i class="fas fa-times fechar-x"></i>
+                    ✅ Cardápio salvo com sucesso!
+                </div>
+            </div>
+            <div id="resultado-cardapio"></div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

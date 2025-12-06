@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CardapiOn.IFPI - Painel</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="tela_inserirAlimento.css">
+
+    <script src="../../sprint 03/dadosAlimentos/dadosAlimentos.js" defer></script>
+    <script src="tela_inserirAlimento.js" defer></script>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <aside>
+        <div>
+            <h2>CardapiOn</h2>
+            <nav>
+                <a href="../../sprint 03/tela_inicial/tela_inicial_Adm.html">
+                    <i class="fa-solid fa-house"></i> Início
+                </a>
+                <a href="../../sprint 03/tela_inserirAlimento/tela_inserirAlimento.html">
+                    <i class="fa-solid fa-receipt"></i> Alimentos
+                </a>
+                <a href="../../sprint 04/tela_enviarAvisos/tela_enviarAvisos.html">
+                    <i class="fa-solid fa-bullhorn"></i> Avisos
+                </a>
+                <a href="../../sprint 05/tela_gerenciarPerfil/tela_gerenciarPerfil.html">
+                    <i class="fa-solid fa-users"></i> Usuários
+                </a>
+                <a href="../../sprint 02/tela_login/tela_login.html">
+                    <i class="fa-solid fa-right-from-bracket"></i> Sair
+                </a>
+
+            </nav>
+        </div>
+        <footer>
+            <p>&copy; Versão 3.0<br>Equipe TDS/IFPI</p>
+            <br>
+        </footer>
+    </aside>
+
+    <main>
+        <header>
+            <h1>Administrador - RU IFPI</h1>
+            <div class="search">
+                <input type="text" id="campoBusca" placeholder="Buscar..." />
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="usuario">👤 Administrador Logado</div>
+        </header>
+
+        <!-- módulo: cardápio -->
+        <section id="modulo-cardapio">
+            <h2>Gerenciar Cardápios</h2>
+        </section>
+
+        <!-- módulo: alimentos -->
+        <section id="modulo-alimentos">
+            <h2>Gerenciar Alimentos</h2>
+
+            <button id="ver-banco" class="ver-banco">Ver banco de dados</button>
+
+            <form id="form-alimento">
+                <input type="text" placeholder="Nome do alimento" required />
+                <select required>
+                    <option value="">Categoria</option>
+                    <option value="Carnes">Carnes</option>
+                    <option value="Hortaliças">Hortaliças</option>
+                    <option value="Grãos">Grãos</option>
+                    <option value="Temperos">Temperos</option>
+                    <option value="Massas">Massas</option>
+                    <option value="Sobremesas">Sobremesas</option>
+                    <option value="Outros">Outros (Especial)</option>
+                </select>
+                <input type="text" placeholder="Unidade de medida (ex: kg, unidade)" required />
+                <button type="submit">Salvar</button>
+            </form>
+
+            <div class="filtros-alimentos">
+                <input type="text" placeholder="Buscar alimento..." />
+                <select>
+                    <option value="">Filtrar por categoria</option>
+                    <option value="Carnes">Carnes</option>
+                    <option value="Hortaliças">Hortaliças</option>
+                    <option value="Grãos">Grãos</option>
+                    <option value="Temperos">Temperos</option>
+                    <option value="Massas">Massas</option>
+                    <option value="Sobremesas">Sobremesas</option>
+                    <option value="Outros">Outros (Especial)</option>
+                </select>
+            </div>
+
+            <!-- blocos por categoria agrupados -->
+            <div class="blocos-expandido">
+
+                <!-- carnes -->
+                <div class="categoria-bloco">
+                    <h3>Carnes</h3>
+                    <ul class="lista-categoria">
+                        <li><span>Frango (kg)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Lombo suíno (kg)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Estrogonofe de frango (kg)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Iscas de carne (kg)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Tábua mista (kg)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Assado de panela (kg)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Pernil suíno (kg)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Creme de galinha (kg)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Bife com cebolas (kg)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Picadinho com legumes (kg)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Chapa mista (kg)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                    </ul>
+                    <button class="adicionar">+ Adicionar alimento</button>
+                </div>
+
+                <!-- grãos -->
+                <div class="categoria-bloco">
+                    <h3>Grãos</h3>
+                    <ul class="lista-categoria">
+                        <li><span>Arroz (kg)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Feijão (kg)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Farofa (kg)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Arroz colorido (kg)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Feijão preto (kg)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Feijão tropeiro (kg)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Maria Isabel (kg)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Baião de dois (kg)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                    </ul>
+                    <button class="adicionar">+ Adicionar alimento</button>
+                </div>
+
+                <!-- hortaliças -->
+                <div class="categoria-bloco">
+                    <h3>Hortaliças</h3>
+                    <ul class="lista-categoria">
+                        <li><span>Salada (unidade)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Salada tropical com feijão fradinho (unidade)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                    </ul>
+                    <button class="adicionar">+ Adicionar alimento</button>
+                </div>
+
+                <!-- massas -->
+                <div class="categoria-bloco">
+                    <h3>Massas</h3>
+                    <ul class="lista-categoria">
+                        <li><span>Macarrão (kg)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Lasanha (unidade)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Macarrão especial (kg)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                    </ul>
+                    <button class="adicionar">+ Adicionar alimento</button>
+                </div>
+
+                <!-- sobremesas -->
+                <div class="categoria-bloco">
+                    <h3>Sobremesas</h3>
+                    <ul class="lista-categoria">
+                        <li><span>Fruta (unidade)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Doce (unidade)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Chocolate quente (unidade)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                    </ul>
+                    <button class="adicionar">+ Adicionar alimento</button>
+                </div>
+
+                <!-- outros (especial) -->
+                <div class="categoria-bloco">
+                    <h3>Outros (Especial)</h3>
+                    <ul class="lista-categoria">
+                        <li><span>Cuscuz com ovos/calabresa (unidade)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Cachorro quente (unidade)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Batata frita (unidade)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                        <li><span>Sopa (unidade)</span>
+                            <div><button>Editar</button><button>Excluir</button></div>
+                        </li>
+                    </ul>
+                    <button class="adicionar">+ Adicionar alimento</button>
+                </div>
+
+
+            </div>
+            <!-- resumo -->
+            <div class="resumo-estoque">
+                <h3>Resumo do Estoque</h3>
+                <p>Total de alimentos cadastrados: 6</p>
+                <p>Última modificação: 20/11/2025</p>
+                <p>Cardápios ativos usando esses alimentos: 2</p>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

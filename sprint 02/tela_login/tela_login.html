@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Login - CardapiOn.IFPI</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="tela_login.css" />
+
+  <script type="module" src="tela_login.js" defer></script>
+
+</head>
+
+<body>
+  <div class="login-page">
+    <div class="login-box">
+      <img src="logo-ifpi-transp.png" alt="Logo IFPI" class="logo" />
+
+      <h1>Login</h1>
+      <p>Acesse ao <strong>CardapiOn.IFPI</strong>:</p>
+
+      <form id="loginForm">
+        <label for="usuario">Usuário ou E-mail</label>
+        <input type="text" id="usuario" name="usuario" required />
+
+        <label for="senha">Senha</label>
+        <div class="senha-container">
+          <input type="password" id="senha" name="senha" required minlength="8" />
+          <span id="toggleSenha" class="material-icons">visibility</span>
+        </div>
+
+        <button type="submit">Entrar</button>
+        <a href="../../sprint 04/tela_criacaoConta/tela_criacaoConta.html">Não possui uma conta?</a>
+        <a href="../../sprint 04/tela_redefinirSenha/tela_redefinirSenha.html">Esqueceu ou deseja alterar sua senha?</a>
+
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>

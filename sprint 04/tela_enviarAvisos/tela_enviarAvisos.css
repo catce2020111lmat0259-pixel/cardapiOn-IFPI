@@ -1,0 +1,374 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  min-height: 100vh;
+  color: #333;
+  margin: 0;
+}
+
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  background: #1b5e20;
+  color: white;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+aside>div {
+  padding-top: 30px;
+}
+
+aside h2 {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 15px 0;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: #2e7d32;
+}
+
+aside footer {
+  font-size: 12px;
+  color: #ddd;
+  text-align: center;
+}
+
+/* principal geral */
+main {
+  margin-left: 260px;
+  padding: 30px;
+  flex-grow: 1;
+  width: calc(100% - 260px);
+  background-color: #f0f0f0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* pesquisa */
+.search {
+  position: relative;
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.search input {
+  padding: 10px 36px 10px 12px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+.search-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  font-size: 1.1em;
+}
+
+.usuario {
+  font-weight: bold;
+}
+
+/* avisos */
+#avisos {
+  padding: 20px;
+}
+
+.avisos-header {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.btn-cadastrar {
+  background-color: #47b673;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 1px solid rgb(132, 185, 150);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-cadastrar:hover {
+  background-color: #1c5f3f;
+}
+
+.lista-avisos {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* novo aviso em modal */
+#modalAviso {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+body.modal-ativo main {
+  filter: blur(4px);
+  pointer-events: none;
+  transition: filter 0.3s ease;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-conteudo {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 0 10px #333;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+/* conteúdo do modal */
+.modal-conteudo h2 {
+  color: green;
+  font-size: 33px;
+}
+
+.modal-conteudo label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+.modal-conteudo input[type="text"],
+.modal-conteudo textarea {
+  width: 100%;
+  padding: 10px 14px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  resize: vertical;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+.modal-conteudo input[type="text"]:focus,
+.modal-conteudo textarea:focus {
+  border-color: #2e8b57;
+  outline: none;
+  background-color: #fff;
+}
+
+.fechar-modal {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#modalMensagem {
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* conteúdo avisos */
+.card-aviso {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.conteudo-aviso {
+  flex: 1;
+  text-align: left;
+}
+
+.conteudo-aviso strong {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.conteudo-aviso p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.acoes-aviso {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.btn-publicar,
+.btn-indeferir {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-publicar {
+  background-color: #2e8b57;
+  color: white;
+}
+
+.btn-indeferir {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* cores e legenda */
+.bola {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.bola.verde {
+  background-color: #2e8b57;
+  /* publicado */
+}
+
+.bola.amarelo {
+  background-color: #f1c40f;
+  /* em análise */
+}
+
+.bola.vermelho {
+  background-color: #e74c3c;
+  /* indeferido / expirado */
+}
+
+.legenda-cores {
+  margin-bottom: 24px;
+  padding: 16px;
+  background-color: #fdfdfd;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.legenda-cores h3 {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #2e8b57;
+}
+
+.legenda-cores ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.legenda-cores li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.avisos-bloco {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+.avisos-bloco h2 {
+  margin-bottom: 16px;
+  font-size: 18px;
+  color: #2e8b57;
+}
+
+.lista-avisos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-aviso {
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 6px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+}

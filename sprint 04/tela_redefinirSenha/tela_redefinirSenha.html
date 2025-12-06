@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Redefinir Senha</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="tela_redefinirSenha.css" />
+
+    <script src="tela_redefinirSenha.js" defer></script>
+
+</head>
+
+<body>
+    <div class="tela-senha">
+
+        <!-- cabeçalho -->
+        <div class="cabecalho-ifpi">
+            <img src="logo-ifpi-transp.png" alt="Logo IFPI" class="logo-ifpi-transp" />
+            <a href="../../sprint 02/tela_login/tela_login.html" class="nome-sistema">CardapiOn.IFPI</a>
+        </div>
+
+        <div class="solicitar-page">
+
+            <div class="titulo-wrapper">
+
+                <h1 class="titulo-principal">
+                    <span class="material-icons">vpn_key</span>
+                    Alterar Senha
+                </h1>
+
+            </div>
+
+            <div class="solicitar-box">
+
+                <form id="formSolicitar">
+
+                    <div class="campo-container">
+                        <label for="email" class="obrigatorio">E-mail:</label>
+                        <input type="email" id="email" name="email" required placeholder="Digite seu e-mail cadastrado"
+                            autocomplete="off" />
+                    </div>
+
+                    <div class="campo-container">
+                        <label for="cpf" class="obrigatorio">CPF:</label>
+                        <input type="text" id="cpf" name="cpf" required pattern="(\d{3}\.\d{3}\.\d{3}-\d{2}|\d{11})"
+                            placeholder="000.000.000-00 ou 00000000000" autocomplete="off" />
+                    </div>
+
+                </form>
+                <div>
+                    <div id="mensagemStatus"></div>
+                    <button id="btnEnviar" class="btn-enviar">Enviar</button>
+                </div>
+
+                <footer>Serviços de Acesso CardapiOn.IFPI</footer>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

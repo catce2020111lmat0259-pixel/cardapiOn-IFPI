@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+/* Cabeçalho */
+.tela-senha {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+.cabecalho-ifpi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo-ifpi-transp {
+    width: 250px;
+    margin-left: 80px;
+}
+
+.nome-sistema {
+    font-size: 20px;
+    color: #797a7a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* fundo */
+.solicitar-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 80px;
+    height: 100vh;
+    background-color: white;
+}
+
+.titulo-wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 0;
+}
+
+.titulo-principal {
+    font-size: 45px;
+    margin: 0;
+    padding: 20px 0;
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+    justify-content: right;
+}
+
+.titulo-principal .material-icons {
+    font-size: 36px;
+    color: #333;
+}
+
+
+/* campos */
+.campo-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 20px;
+    border: #bbbbbb solid 1px;
+    margin: 0;
+    border-bottom: none;
+    border-radius: 3px;
+}
+
+.campo-container:last-of-type {
+    border-bottom: 1px solid #bbbbbb;
+}
+
+.campo-container label {
+    flex: 0 0 70px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.campo-container input {
+    flex: 1;
+    padding: 10px;
+}
+
+.solicitar-box {
+    background-color: #f7f7f7;
+    padding: 40px 60px;
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+    border-top: none;
+    border-radius: 1%;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.obrigatorio::before {
+    content: "* ";
+    color: red;
+}
+
+input[type="email"],
+input[type="text"] {
+    width: 100%;
+    padding: 14px;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* mensagem */
+#mensagemStatus {
+    font-size: 12px;
+    font-weight: bold;
+    min-height: 22px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+#mensagemStatus.sucesso {
+    color: #329137;
+}
+
+#mensagemStatus.erro {
+    color: #e94e4e;
+}
+
+/* botão */
+.btn-enviar {
+    padding: 14px;
+    background-color: #2e7d32;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-enviar:hover {
+    background-color: #27692c;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 13px;
+    color: #777;
+    text-align: center;
+}
